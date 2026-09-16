@@ -27,13 +27,31 @@ public class Inquilino extends Residente {
     // Implementación del método puedeIngresar() en la clase Inquilino de la clase abstracta Persona
 
     public boolean puedeIngresar() {
-
+        if (contratoVigente == true) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
-    // Implementación del método mostrarInformacion() de la clase abstracta Persona
+    // Sobreescritura del método mostrarInformacion() de la clase abstracta Persona
+
+    @Override
 
     public void mostrarInformacion() {
-
+        System.out.println("Inquilino, estos son los datos de tu ingreso: ");
+        System.out.println("Documento: "+getDocumento());
+        System.out.println("Nombre: "+getNombre());
+        if (isActivo() == true) {
+            System.out.println("Se encuentra activo en el sistema: Si");
+        } else {
+            System.out.println("Se encuentra activo en el sistema: No");
+        }
+        if (contratoVigente == true) {
+            System.out.println("Estado del contrato: Vigente");
+        } else {
+            System.out.println("Estado del contrato: Expirado");
+        }
     }
 
 }

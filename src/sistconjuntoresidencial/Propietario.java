@@ -33,7 +33,7 @@ public class Propietario extends Residente {
 
     @Override
     public void mostrarInformacion() {
-        System.out.println("Estos son los datos de tu ingreso: ");
+        System.out.println("Propietario, estos son los datos de tu ingreso: ");
         System.out.println("Documento: "+getDocumento());
         System.out.println("Nombre: "+getNombre());
         if (isActivo() == true) {

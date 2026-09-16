@@ -64,7 +64,7 @@ public abstract class Persona {
     // Método para mostrar la información de un objeto de clase Persona
 
     public void mostrarInformacion() {
-        System.out.println("Estos son los datos de tu ingreso: ");
+        System.out.println("Persona, estos son los datos de tu ingreso: ");
         System.out.println("Documento: "+documento);
         System.out.println("Nombre: "+nombre);
         if (activo == true) {

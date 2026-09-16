@@ -31,7 +31,7 @@ public abstract class Residente extends Persona {
     // Método para mostrar la vivienda del residente
     
     public void mostrarVivienda() {
-        System.out.println("Tu vivienda es: ");
+        System.out.println("Residente, tu vivienda es: ");
         System.out.println("Torre: "+torre);
         System.out.println("Apartamento: "+apartamento);
     }
