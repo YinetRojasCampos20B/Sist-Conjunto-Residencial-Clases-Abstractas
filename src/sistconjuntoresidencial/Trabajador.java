@@ -7,6 +7,15 @@ public class Trabajador extends Persona {
     private String cargo;
     private boolean permisoIngreso;
 
+    // Constructor que recibe todos los atributos de la clase Trabajador
+
+    public Trabajador(String documento, String nombre, boolean activo, String cargo, boolean permisoIngreso) {
+        super(documento, nombre, activo);
+        this.cargo = cargo;
+        this.permisoIngreso = permisoIngreso;
+    }
+
+
     // Getters y setters de la clase concreta Trabajador
 
     // Cargo
