@@ -51,29 +51,5 @@ public abstract class Residente extends Persona {
         return apartamento;
     }
 
-    // Sobreescritura de los métodos puedeIngresar y mostrarInformacion, de la clase abstracta madre Persona
-
-    @Override
-    public boolean puedeIngresar() {
-        if (isActivo()) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-
-    @Override
-    public void mostrarInformacion() {
-        System.out.println("Estos son los datos de tu ingreso: ");
-        System.out.println("Documento: "+getDocumento());
-        System.out.println("Nombre: "+getNombre());
-        if (isActivo() == true) {
-            System.out.println("Se encuentra activo en el sistema: Si");
-        } else {
-            System.out.println("Se encuentra activo en el sistema: No");
-        }
-        System.out.println("Torre: "+torre);
-        System.out.println("Apartamento: "+apartamento);
-    }
    }
 
