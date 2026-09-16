@@ -46,6 +46,7 @@ public class Proveedor extends Persona {
         System.out.println("Proveedor, estos son los datos de tu ingreso: ");
         System.out.println("Documento: "+getDocumento());
         System.out.println("Nombre: "+getNombre());
+        System.out.println("Empresa: "+empresa);
         if (isActivo() == true) {
             System.out.println("Se encuentra activo en el sistema: Si");
         } else {
