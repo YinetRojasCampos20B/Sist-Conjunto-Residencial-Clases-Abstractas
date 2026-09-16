@@ -6,6 +6,15 @@ public class Proveedor extends Persona {
     public String empresa;
     public boolean visitaAutorizada;
 
+    // Constructor de la clase hija Proveedor de la clase abstracta madre Persona
+
+    public Proveedor(String documento, String nombre, boolean activo, String empresa, boolean visitaAutorizada) {
+        super(documento, nombre, activo);
+        this.empresa = empresa;
+        this.visitaAutorizada = visitaAutorizada;
+    }
+
+
     // Getters y setters de la clase concreta Proveedor
 
     public String getEmpresa() {
@@ -23,12 +32,31 @@ public class Proveedor extends Persona {
     // Implementación del método puedeIngresar() de la clase Trabajador de la clase abstracta Persona
 
     public boolean puedeIngresar() {
-        return true;
+        if (visitaAutorizada == true) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
-    // Implementación del método mostrarInformacion() de la clase Trabajador de la clase abstracta Persona
+    // Sobreescritura del método mostrarInformacion() de la clase Trabajador de la clase abstracta Persona
 
+    @Override
     public void mostrarInformacion() {
+        System.out.println("Proveedor, estos son los datos de tu ingreso: ");
+        System.out.println("Documento: "+getDocumento());
+        System.out.println("Nombre: "+getNombre());
+        if (isActivo() == true) {
+            System.out.println("Se encuentra activo en el sistema: Si");
+        } else {
+            System.out.println("Se encuentra activo en el sistema: No");
+        }
+        if (visitaAutorizada == true) {
+            System.out.println("Visita autorizada: Si");
+        } else {
+            System.out.println("Visita autorizada: No");
+        }
+
 
     }
 
