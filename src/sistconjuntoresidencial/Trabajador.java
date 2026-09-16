@@ -28,12 +28,25 @@ public class Trabajador extends Persona {
     // Implementación del método puedeIngresar() de la clase Trabajador de la clase abstracta Persona
 
     public boolean puedeIngresar() {
-        return true;
+        if (permisoIngreso == true) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
-    // Implementación del método mostrarInformacion() de la clase Trabajador de la clase abstracta Persona
+    // Sobreescribiendo el método mostrarInformacion() de la clase Trabajador de la clase abstracta Persona
+
+    @Override
 
     public void mostrarInformacion() {
-
+        System.out.println("Trabajador, estos son tus datos de ingreso: ");
+        super.mostrarInformacion();
+        System.out.println("Cargo: "+cargo);
+        if (permisoIngreso == true) {
+            System.out.println("Cuenta con permiso de ingreso: Si");
+        } else {
+            System.out.println("Cuenta con permiso de ingreso: No");
+        }
     }
 }

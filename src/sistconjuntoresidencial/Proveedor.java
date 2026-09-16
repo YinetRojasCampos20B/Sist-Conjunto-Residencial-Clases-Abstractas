@@ -39,7 +39,7 @@ public class Proveedor extends Persona {
         }
     }
 
-    // Sobreescritura del método mostrarInformacion() de la clase Trabajador de la clase abstracta Persona
+    // Sobreescritura del método mostrarInformacion() de la clase Proveedor de la clase abstracta Persona
 
     @Override
     public void mostrarInformacion() {
