@@ -14,24 +14,36 @@ public class Propietario extends Residente {
     
     public Propietario (String documento, String nombre, boolean activo, String torre, String apartamento) {
         super(documento, nombre, activo, torre, apartamento);
-    } 
-    
-    // Implementación del método abstracto puedeIngresar() de la clase Persona
-    
-    public boolean puedeIngresar() {
-        if (isActivo() == true) {
-            mostrarResultadoAcceso();
-        }
     }
     
     // Métodos auxiliares de la clase Propietario
-    
-    // Método para validar si tiene permisos de gestión de trámites en administración
-    
-    public void mostrarInformacion() {
 
+    // Implementación del método abstracto puedeIngresar() de la clase Persona
+
+    public boolean puedeIngresar() {
+        if (isActivo() == true) {
+            mostrarResultadoAcceso();
+            return true;
+        } else {
+            return false;
+        }
     }
-    
+
+    // Sobreescritura del método mostrarInformacion
+
+    @Override
+    public void mostrarInformacion() {
+        System.out.println("Estos son los datos de tu ingreso: ");
+        System.out.println("Documento: "+getDocumento());
+        System.out.println("Nombre: "+getNombre());
+        if (isActivo() == true) {
+            System.out.println("Se encuentra activo en el sistema: Si");
+        } else {
+            System.out.println("Se encuentra activo en el sistema: No");
+        }
+        System.out.println("Torre: "+getTorre());
+        System.out.println("Apartamento: "+getApartamento());
+    }
     
     
 }
