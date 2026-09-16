@@ -19,7 +19,9 @@ public class Propietario extends Residente {
     // Implementación del método abstracto puedeIngresar() de la clase Persona
     
     public boolean puedeIngresar() {
-        System.out.println();
+        if (isActivo() == true) {
+            mostrarResultadoAcceso();
+        }
     }
     
     // Métodos auxiliares de la clase Propietario

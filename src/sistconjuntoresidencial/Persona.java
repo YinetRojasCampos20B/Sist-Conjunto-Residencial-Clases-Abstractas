@@ -58,16 +58,29 @@ public abstract class Persona {
         this.activo = activo;
     }
 
-
     // Métodos auxiliares de la clase abstracta Persona
-    
+
+
+    // Método para mostrar la información de un objeto de clase Persona
+
+    public void mostrarInformacion() {
+        System.out.println("Estos son los datos de tu ingreso: ");
+        System.out.println("Documento: "+documento);
+        System.out.println("Nombre: "+nombre);
+        if (activo == true) {
+            System.out.println("Se encuentra activo en el sistema: Si");
+        } else {
+            System.out.println("Se encuentra activo en el sistema: No");
+        }
+    }
     
     // Método para mostrar el resultado del acceso
     
     public void mostrarResultadoAcceso() {
         System.out.println("¡Acceso autorizado!");
     } 
-    
+
+
     // Métodos de contrato para implementar en las clases hijas de la clase Persona
     
     
