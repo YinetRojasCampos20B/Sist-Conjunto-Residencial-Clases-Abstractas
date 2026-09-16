@@ -18,7 +18,7 @@ public abstract class Persona {
     private String nombre;
     private boolean activo;
     
-    // Método constructor de la clase abstracta Persona
+    // Método constructor de la clase abstracta Persona (para ser llamado por super en las clases concretas). NO PUEDE INSTANCIAR OBJETOS DIRECTAMENTE DE ESTA CLASE
     
     public Persona(String documento, String nombre, boolean activo) {
         this.documento = documento;
