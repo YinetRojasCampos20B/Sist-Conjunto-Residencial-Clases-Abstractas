@@ -31,7 +31,7 @@ public class SistConjuntoResidencial {
 
         // Instanciación de objetos de la clase real Trabajador
 
-        Trabajador t1 = new Trabajador("123579887", "Lindsey Deanne Lohan", false, "Auxiliar de servicios generales", true);
+        Trabajador t1 = new Trabajador("1235798871", "Lindsey Deanne Lohan", false, "Auxiliar de servicios generales", true);
 
         /*
         * PROGRAMA DE PRUEBA PRINCIPAL
