@@ -35,11 +35,6 @@ public class Propietario extends Residente {
     public void mostrarInformacion() {
         System.out.println("Propietario, estos son los datos de tu ingreso: ");
         super.mostrarInformacion();
-        if (isActivo() == true) {
-            System.out.println("Se encuentra activo en el sistema: Si");
-        } else {
-            System.out.println("Se encuentra activo en el sistema: No");
-        }
         System.out.println("Torre: "+getTorre());
         System.out.println("Apartamento: "+getApartamento());
     }
