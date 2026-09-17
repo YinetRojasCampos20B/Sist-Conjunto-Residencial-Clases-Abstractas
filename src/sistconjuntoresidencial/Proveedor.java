@@ -46,11 +46,6 @@ public class Proveedor extends Persona {
         System.out.println("Proveedor, estos son los datos de tu ingreso: ");
         super.mostrarInformacion();
         System.out.println("Empresa: "+empresa);
-        if (isActivo() == true) {
-            System.out.println("Se encuentra activo en el sistema: Si");
-        } else {
-            System.out.println("Se encuentra activo en el sistema: No");
-        }
         if (visitaAutorizada == true) {
             System.out.println("Visita autorizada: Si");
         } else {
