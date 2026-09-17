@@ -22,7 +22,6 @@ public class Propietario extends Residente {
 
     public boolean puedeIngresar() {
         if (isActivo() == true) {
-            mostrarResultadoAcceso();
             return true;
         } else {
             return false;

@@ -100,6 +100,8 @@ public class SistConjuntoResidencial {
             if (persona.puedeIngresar() == false) {
                 System.out.println("¡No puedes ingresar al conjunto, tu usuario se encuentra inactivo!");
                 System.out.println("Gracias por probar el programa");
+            } else {
+                persona.mostrarResultadoAcceso();
             }
         } else {
             System.out.println("Gracias por probar el programa");
