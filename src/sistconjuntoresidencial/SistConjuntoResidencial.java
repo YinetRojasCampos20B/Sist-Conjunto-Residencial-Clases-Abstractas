@@ -48,26 +48,61 @@ public class SistConjuntoResidencial {
 
         int opcion = entrada.nextInt();
 
+        int optIngreso;
         switch (opcion) {
 
             case 1:
                 System.out.println("¡Bienvenido, "+p1.getNombre()+"!");
                 p1.mostrarInformacion();
-
+                imprimirMenuIngreso();
+                optIngreso = entrada.nextInt();
+                gestionarIngreso(p1, optIngreso);
                 break;
             case 2:
                 System.out.println("¡Bienvenido, "+inq1.getNombre()+"!");
                 inq1.mostrarInformacion();
+                imprimirMenuIngreso();
+                optIngreso = entrada.nextInt();
+                gestionarIngreso(inq1, optIngreso);
                 break;
             case 3:
                 System.out.println("¡Bienvenido, "+prov1.getNombre()+"!");
                 prov1.mostrarInformacion();
+                imprimirMenuIngreso();
+                optIngreso = entrada.nextInt();
+                gestionarIngreso(prov1, optIngreso);
                 break;
             case 4:
                 System.out.println("¡Bienvenido, "+t1.getNombre()+"!");
                 t1.mostrarInformacion();
+                imprimirMenuIngreso();
+                optIngreso = entrada.nextInt();
+                gestionarIngreso(t1, optIngreso);
                 break;
         }
     }
-    
+
+    // Métodos complementarios de la clase principal
+
+    // Método para imprimir el menú de ingreso
+
+    public static void imprimirMenuIngreso() {
+        System.out.println("¿Desea ingresar al conjunto?");
+        System.out.println("1) Si");
+        System.out.println("2) No");
+    }
+
+    // Método para gestionar el ingreso de cada uno de los usuarios al conjunto residencial
+
+    public static void gestionarIngreso(Persona persona, int optIngreso) {
+        if (optIngreso == 1) {
+            persona.puedeIngresar();
+            if (persona.puedeIngresar() == false) {
+                System.out.println("¡No puedes ingresar al conjunto, tu usuario se encuentra inactivo!");
+                System.out.println("Gracias por probar el programa");
+            }
+        } else {
+            System.out.println("Gracias por probar el programa");
+        }
+    }
 }

@@ -35,8 +35,7 @@ public class Propietario extends Residente {
     public void mostrarInformacion() {
         System.out.println("Propietario, estos son los datos de tu ingreso: ");
         super.mostrarInformacion();
-        System.out.println("Torre: "+getTorre());
-        System.out.println("Apartamento: "+getApartamento());
+        mostrarVivienda();
     }
     
     

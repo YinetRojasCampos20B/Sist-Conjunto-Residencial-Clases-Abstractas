@@ -41,11 +41,7 @@ public class Inquilino extends Residente {
     public void mostrarInformacion() {
         System.out.println("Inquilino, estos son los datos de tu ingreso: ");
         super.mostrarInformacion();
-        if (isActivo() == true) {
-            System.out.println("Se encuentra activo en el sistema: Si");
-        } else {
-            System.out.println("Se encuentra activo en el sistema: No");
-        }
+        mostrarVivienda();
         if (contratoVigente == true) {
             System.out.println("Estado del contrato: Vigente");
         } else {
