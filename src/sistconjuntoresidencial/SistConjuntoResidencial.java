@@ -38,11 +38,14 @@ public class SistConjuntoResidencial {
         */
 
         System.out.println("¡Bienvenidos al sistema de ingreso a conjuntos residenciales!");
+        System.out.println("---------------------------------------");
         System.out.println("Selecciona tu rol y usuario: ");
         System.out.println("1) Propietario: "+p1.getNombre());
         System.out.println("2) Inquilino: "+inq1.getNombre());
         System.out.println("3) Proveedor: "+prov1.getNombre());
         System.out.println("4) Trabajador: "+t1.getNombre());
+        System.out.println("---------------------------------------");
+        System.out.println("Selecciona una opción: ");
 
         Scanner entrada = new Scanner(System.in);
 
