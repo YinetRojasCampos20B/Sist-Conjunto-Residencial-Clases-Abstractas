@@ -3,8 +3,8 @@ package sistconjuntoresidencial;
 public class Proveedor extends Persona {
     // Atributos propios de la clase concreta Proveedor
 
-    public String empresa;
-    public boolean visitaAutorizada;
+    private String empresa;
+    private boolean visitaAutorizada;
 
     // Constructor de la clase hija Proveedor de la clase abstracta madre Persona
 
